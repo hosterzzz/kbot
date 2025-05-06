@@ -39,7 +39,7 @@ to quickly create a Cobra application.`,
 		})
 
 		if err != nil {
-			log.Fatalf("Please check TELE_TOKEN env variable. %s", err)
+			log.Fatalf("Please enter TELE_TOKEN env variable. %s", err)
 			return
 		}
 
@@ -49,8 +49,8 @@ to quickly create a Cobra application.`,
 			payload := m.Message().Payload
 
 			switch payload {
-				case "hello":
-					err = m.Send(fmt.Sprintf("Hello I'm Kbot %s", appVersion))
+			case "hello":
+				err = m.Send(fmt.Sprintf("Greetings, my name is Kbot %s", appVersion))
 			}
 			return err
 		})
